@@ -51,7 +51,7 @@ $cityArray = [
 foreach ($cityArray as $area =>$city){
     echo "$area". " : ";
         foreach ($city as $value){
-            echo $value . " ";
+            echo $value ."; ";
         };
         echo "<br>";
 };
@@ -151,11 +151,10 @@ echo "<h1>Задание 8</h1>";
 foreach ($cityArray as $area =>$city){
     echo "$area". " : ";
     foreach ($city as $value){
-        echo str_split($value)[0];
-
-//        if ($some){
-//            echo $value;
-//        }
+        $someArray = preg_split("//u", $value);
+        if ($someArray[1] == "К"){
+            echo $value . "; ";
+        };
     };
     echo "<br>";
 };
